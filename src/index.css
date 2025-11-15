@@ -1,0 +1,149 @@
+:root {
+  /* Font System */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color Scheme */
+  color-scheme: light;
+  
+  /* Color Variables - White Background with Yellow Accents */
+  --color-primary: #f8d01d;
+  --color-primary-dark: #ffdf2b;
+  --color-primary-darker: #92400e;
+  --color-primary-light: #fef3c7;
+  --color-primary-lighter: #fde68a;
+  --color-background: #ffffff;  /* Pure white base */
+  --color-background-alt: #fafafa;  /* Slightly off-white alternative */
+  --color-background-elevated: #ffffff;  /* White for cards and elevated surfaces */
+  --color-text: #1f2937;  /* Dark grey text */
+  --color-text-alt: #374151;  /* Alternative dark grey text */
+  --color-text-muted: #6b7280;  /* Muted grey text */
+  --color-text-light: #9ca3af;  /* Light grey text */
+  --color-border: #374151;  /* Dark grey borders */
+  --color-border-light: #d1d5db;  /* Light grey borders */
+  --color-white: #ffffff;
+  --color-error: #ef4444;
+  --color-error-bg: #fef2f2;
+  --color-error-bg-light: #fee2e2;
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  
+  /* Spacing Variables */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Border Radius Variables */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 25px;
+  --radius-full: 50px;
+  
+  /* Font Weight Variables */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Font Size Variables */
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.1rem;
+  --font-size-xl: 1.2rem;
+  --font-size-2xl: 1.3rem;
+  --font-size-3xl: 1.5rem;
+  --font-size-4xl: 2rem;
+  --font-size-5xl: 2.5rem;
+  --font-size-6xl: 3rem;
+  --font-size-display: 3.2em;
+  
+  /* Transition Variables */
+  --transition-fast: all 0.15s ease;
+  --transition-base: all 0.3s ease;
+  --transition-slow: all 0.6s ease;
+  --transition-border: border-color 0.25s;
+  
+  /* Shadow Variables - Yellow Glow Effects */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --shadow-yellow: 0 0 20px rgba(245, 158, 11, 0.3);
+  --shadow-yellow-lg: 0 0 40px rgba(245, 158, 11, 0.4);
+  --shadow-focus: 0 0 0 3px rgba(245, 158, 11, 0.2);
+  --shadow-error: 0 4px 6px rgba(239, 68, 68, 0.1);
+  
+  /* Border Variables with Yellow Glow */
+  --border-yellow-glow: 2px solid var(--color-border);
+  --border-yellow-glow-hover: 2px solid var(--color-primary);
+  
+  /* Z-index Variables */
+  --z-sticky: 100;
+  --z-dropdown: 200;
+  --z-modal: 300;
+  
+  /* Apply base styles */
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: var(--font-size-display);
+  line-height: 1.1;
+}
+
+button {
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-border-light);
+  padding: 0.6em 1.2em;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  background-color: var(--color-white);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+button:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-yellow);
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}
